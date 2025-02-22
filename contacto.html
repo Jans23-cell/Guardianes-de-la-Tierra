@@ -36,185 +36,6 @@
         .header p {
             font-size: 1.2em;
         }
-        .product-card {
-            margin: 20px 0;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
-        .product-card img {
-            width: 100%;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-        .product-card-body {
-            padding: 15px;
-        }
-        .product-card-body h5 {
-            font-size: 1.5em;
-            color: #333;
-        }
-        .product-card-body p {
-            color: #666;
-        }
-        .product-card-body .btn {
-            width: 100%;
-            background-color: #28a745;
-            color: white;
-        }
-        .footer {
-            background-color: #2E8B57;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-        .footer p {
-            margin: 0;
-        }
-        .cart-container {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            width: 250px;
-        }
-        .cart-btn {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            border-radius: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .cart-btn i {
-            margin-right: 10px;
-        }
-        .cart-items {
-            margin-top: 10px;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
-        }
-        .cart-total {
-            margin-top: 15px;
-            text-align: center;
-        }
-        .cart-total p {
-            font-weight: bold;
-        }
-
-        /* Chatbox Styles */
-        .chat-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 300px;
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            padding: 10px;
-            display: none;
-            flex-direction: column;
-        }
-        .chat-header {
-            background-color: #28a745;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            border-radius: 10px 10px 0 0;
-            font-weight: bold;
-        }
-        .chat-messages {
-            height: 200px;
-            overflow-y: auto;
-            margin: 10px 0;
-        }
-        .chat-input {
-            display: flex;
-            justify-content: space-between;
-        }
-        .chat-input input {
-            width: 80%;
-            padding: 8px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-        }
-        .chat-input button {
-            width: 15%;
-            background-color: #28a745;
-            border: none;
-            color: white;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        .chat-message {
-            padding: 5px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-        }
-        .chat-message.robot {
-            background-color: #f1f1f1;
-            text-align: left;
-        }
-        .chat-message.user {
-            background-color: #d4edda;
-            text-align: right;
-        }
-
-        /* Product Section */
-        .product-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .product-card {
-            width: 300px;
-            margin: 15px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card img {
-            border-radius: 10px 10px 0 0;
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .product-card-body {
-            padding: 20px;
-        }
-
-        .product-card-body h5 {
-            margin: 10px 0;
-        }
-
-        .product-card-body p {
-            font-size: 1em;
-        }
-
-        .product-card-body .btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border-radius: 10px;
-            cursor: pointer;
-        }
 
         /* Formulario de contacto */
         .contact-form {
@@ -230,7 +51,8 @@
         }
 
         .contact-form input,
-        .contact-form textarea {
+        .contact-form textarea,
+        .contact-form select {
             width: 100%;
             margin-bottom: 15px;
             padding: 10px;
@@ -246,6 +68,23 @@
             border-radius: 10px;
             width: 100%;
             cursor: pointer;
+        }
+
+        /* Información de Contacto */
+        .contact-info {
+            background-color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+        .contact-info i {
+            font-size: 2em;
+            color: #28a745;
+        }
+        .contact-info p {
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -275,15 +114,42 @@
         <p>Compra tu árbol ecológico y ayuda al medio ambiente</p>
     </header>
 
+    <!-- Información de Contacto Section -->
+    <section class="contact-info container my-5">
+        <h3>Información de Contacto</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Ubicación:</strong><br> Av. Siempre Viva, 123, Ciudad Ecológica</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Email:</strong><br> contacto@arbolesecologicos.com</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-phone"></i>
+                <p><strong>Teléfono:</strong><br> +1 234 567 890</p>
+            </div>
+            <div class="col-md-3">
+                <i class="fab fa-whatsapp"></i>
+                <p><strong>WhatsApp:</strong><br> <a href="https://wa.me/1234567890" target="_blank">Enviar mensaje</a></p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Form Section -->
     <section id="contacto" class="container my-5">
         <div class="contact-form">
             <h3>Contáctanos</h3>
-            <form>
-                <input type="text" class="form-control" placeholder="Tu nombre" required>
-                <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
-                <textarea class="form-control" rows="5" placeholder="Tu mensaje" required></textarea>
-                <button type="submit" class="btn btn-success">Enviar Mensaje</button>
+            <form id="contact-form">
+                <input type="email" id="email" class="form-control" placeholder="Tu correo electrónico" required>
+                <select id="interest" class="form-control" required>
+                    <option value="">¿Estás interesado en nuestros productos?</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+                <textarea class="form-control" rows="5" id="message" placeholder="Tu mensaje" required></textarea>
+                <button type="button" class="btn btn-success" onclick="sendWhatsAppMessage()">Enviar Mensaje</button>
             </form>
         </div>
     </section>
@@ -295,6 +161,22 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function sendWhatsAppMessage() {
+            var email = document.getElementById("email").value;
+            var interest = document.getElementById("interest").value;
+            var message = document.getElementById("message").value;
+            
+            var whatsappMessage = `*Nuevo Mensaje de Árboles Ecológicos*%0A%0A`;
+            whatsappMessage += `Email: ${email}%0A`;
+            whatsappMessage += `Interés: ${interest}%0A`;
+            whatsappMessage += `Mensaje: ${message}`;
+
+            var whatsappLink = `https://wa.me/51+998269448?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappLink, '_blank');
+        }
+    </script>
 
 </body>
 </html>

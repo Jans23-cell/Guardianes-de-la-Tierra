@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Árboles Ecológicos</title>
+    <title>Guardianes de la Tierra</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="icon" href="https://i.postimg.cc/9FC3FZPy/Whats-App-Image-2025-02-08-at-11-13-43-PM.jpg" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -20,14 +20,6 @@
         }
         .navbar a {
             color: white;
-        }
-        .header {
-            background-image: url('https://i.postimg.cc/qv4TtzdH/arbol-header.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 80px 0;
-            color: white;
-            text-align: center;
         }
         .header h1 {
             font-size: 3em;
@@ -89,6 +81,13 @@
         .chat-message.robot {
             background-color: #f1f1f1;
             text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        .chat-message.robot img {
+            width: 30px; /* Tamaño de la imagen del robot */
+            height: 30px;
+            margin-right: 10px;
         }
         .chat-message.user {
             background-color: #d4edda;
@@ -134,7 +133,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Árboles Ecológicos</a>
+            <a class="navbar-brand" href="#">Guardianes de la Tierra</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -142,7 +141,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="producto.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="oferta.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="oferta.html">Sobre Nosostros</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
@@ -151,29 +150,49 @@
 
     <!-- Header -->
     <header class="header">
-        <h1>Árboles Ecológicos</h1>
-        <p>¡Cuida el planeta con nuestros árboles ecológicos de alta calidad!</p>
+        <h1>Guardianes de la Tierra</h1>
+        <p>¡Cuida el planeta es nuestra responsabilidad!</p>
     </header>
 
     <!-- Sección de Productos -->
     <section id="productos">
         <h2>Productos Disponibles</h2>
         <div class="product-card">
-            <img src="https://www.example.com/imagen-arbol1.jpg" alt="Árbol 1">
-            <h3>Árbol Ecológico 1</h3>
+            <img src="assert2/hola.jpeg" alt="">
+            <h3>Ecodoble repisa</h3>
             <p>Precio: $30</p>
-            <button>Añadir al carrito</button>
         </div>
         <div class="product-card">
-            <img src="https://www.example.com/imagen-arbol2.jpg" alt="Árbol 2">
-            <h3>Árbol Ecológico 2</h3>
+            <img src="assert2/est.jpeg" alt="">
+            <h3>Tapete de soga reciclable</h3>
             <p>Precio: $45</p>
-            <button>Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="assert2/bolssa.jpeg" alt="">
+            <h3>Bolsa ecológica de mano.</h3>
+            <p>Precio: $40</p>
+        </div>
+        <div class="product-card">
+            <img src="assert2/carpeta.jpeg" alt="">
+            <h3>Corchobask</h3>
+            <p>Precio: $50</p>
+        </div>
+        <div class="product-card">
+            <img src="assert2/espejos.jpeg" alt="">
+            <h3>Rueda de lujo </h3>
+            <p>Precio: $50</p>
+        </div>
+        <div class="product-card">
+            <img src="assert2/florero.jpeg" alt="">
+            <h3>Florecer luminoso</h3>
+            <p>Precio: $50</p>
         </div>
     </section>
 
-    <!-- Botón para activar el robot -->
-    <button class="btn btn-success" id="open-chat" onclick="toggleChat()">Chat con el Robot</button>
+    <!-- Botón para activar el chat con el robot, usando la imagen en lugar de texto -->
+    <button class="btn btn-success" id="open-chat" onclick="toggleChat()">
+        <img src="https://i.postimg.cc/hGNKMK5K/www-ubuy.jpg" alt="Robot" style="width: 30px; height: 30px;">
+    </button>
 
     <!-- Chatbot Section (oculto inicialmente) -->
     <div class="chat-container" id="chatbot">
@@ -181,7 +200,11 @@
             <h5>Asistente Virtual</h5>
         </div>
         <div class="chat-messages" id="chat-messages">
-            <div class="chat-message robot">¡Hola! ¿En qué puedo ayudarte hoy?</div>
+            <div class="chat-message robot">
+                <!-- Imagen del robot al inicio del chat -->
+                <img src="https://i.postimg.cc/hGNKMK5K/www-ubuy.jpg" alt="Robot" style="width: 30px; height: 30px; margin-right: 10px;">
+                ¡Hola! ¿En qué puedo ayudarte hoy?
+            </div>
         </div>
         <div class="chat-input">
             <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
@@ -190,7 +213,7 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2025 Árboles Ecológicos. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Todos los derechos reservados.</p>
     </footer>
 
     <script>
@@ -214,7 +237,7 @@
                 // Simula una respuesta del robot
                 setTimeout(function() {
                     var botResponse = getBotResponse(userMessage);
-                    chatMessages.innerHTML += `<div class="chat-message robot">${botResponse}</div>`;
+                    chatMessages.innerHTML += `<div class="chat-message robot"><img src="https://i.postimg.cc/hGNKMK5K/www-ubuy.jpg" alt="Robot"> ${botResponse}</div>`;
                     chatMessages.scrollTop = chatMessages.scrollHeight;
                 }, 1000);
             }
@@ -225,16 +248,18 @@
             var lowerMessage = userMessage.toLowerCase();
 
             switch (true) {
+                case lowerMessage.includes("hola"):
+                    return "Hola, ¿Estás interesado en algún producto?, estamos para atenderte.";
+                case lowerMessage.includes("producto"):
+                    return "Nuestros productos son los mejores, contienen la 3B: Bueno, Bonito y Barato.";
                 case lowerMessage.includes("precio"):
-                    return "Los precios de nuestros árboles ecológicos van desde $30 hasta $50.";
-                case lowerMessage.includes("precio"):
-                    return "calla cholo de mierda";
-                case lowerMessage.includes("plantar"):
-                    return "Te recomendamos plantar tus árboles en un lugar con buena exposición al sol y tierra bien drenada.";
-                case lowerMessage.includes("cuidado"):
-                    return "Los árboles ecológicos requieren riego moderado y protección contra plagas.";
+                    return "Tenemos una gran variedad de productos ecológicos, pero si es un regalo especial para tu mamá te recomiendo la bolsa ecológica de mano";
+                case lowerMessage.includes("descuento"):
+                    return "Sii, tenemos descuentos del 40% y un regalo sorpresa.";
+                case lowerMessage.includes("hacen envios"):
+                    return "Por el momento no contamos con motorizados para hacer delivery, pero podemos hacerte el envío por agencia Shalom.";
                 default:
-                    return "Lo siento, no entiendo quechua me puede especifar en otro idioma que se entienda ¿Te gustaría saber más sobre nuestros productos?";
+                    return "Lo siento, no te entiendo ¿Te gustaría saber más sobre nuestros productos?";
             }
         }
     </script>
